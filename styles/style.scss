@@ -1,0 +1,94 @@
+$PrimaryColor1: #232825;
+$PrimaryColor2: #EAA159;
+$SecondaryColor: #F5F3F0;
+
+@font-face {
+    font-family: Metropolis-Light;
+    src: url("../fonts/Metropolis-Light.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Metropolis-Medium;
+    src: url("../fonts/Metropolis-Medium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Metropolis-Light-Italic;
+    src: url("../fonts/metropolis.light-italic.otf") format("opentype");
+}
+
+h1 {
+    font-family: Metropolis-Medium;
+    font-size: 4rem;
+}
+
+h2 {
+
+}
+
+h3 {
+    font-family: Metropolis-Light-Italic;
+    font-size: 2em;
+}
+
+body {
+    margin: auto;
+    background-color: $SecondaryColor;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-auto-columns: minmax(10em, auto);
+    grid-auto-rows: minmax(10em, auto);
+}
+
+#sidebar {
+    justify-self: end;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background: $PrimaryColor1;
+    width: 6em;
+    height: 100%;
+    border-left: 6px $PrimaryColor2 ridge;
+}
+
+header {
+    height: 12em;
+    margin: 4em;
+    display: flex;
+    align-items: center;
+}
+
+#header-logo {
+    height: 100%;
+}
+
+#header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    bottom: .5em;
+}
+
+#name {
+    margin: auto .5em auto .5em;
+    color: $PrimaryColor1;
+    text-overflow: none;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.contrast {
+    color: $PrimaryColor2;
+}
+
+#header-line {
+    margin: auto;
+    position: relative;
+    left: 2em;
+}
